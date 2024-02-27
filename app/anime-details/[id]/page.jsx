@@ -1,11 +1,5 @@
 import { fetchOne } from "./fetchOneId";
 
-export const GenerateMetaData = ({ params }) => {
-  return {
-    title: `anime-${params.id}`,
-    description: "Your favorite anime, all in one place.",
-  };
-};
 async function animeDetailsPage({ params }) {
   const data = await fetchOne(params.id);
   return (
